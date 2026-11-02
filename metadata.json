@@ -1,0 +1,6 @@
+{
+  "name": "Festive Wishes",
+  "description": "Festive Wishes - Create and share beautiful personalized greeting cards and animated greeting videos for Indian festivals including Diwali, Holi, Chhath Puja, Eid, Christmas, and New Year.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

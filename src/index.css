@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-rozha: 'Rozha One', serif;
+    --font-yatra: 'Yatra One', cursive, sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-cinzel: 'Cinzel Decorative', cursive, serif;
+  }
+}
+
+.font-rozha {
+  font-family: var(--font-rozha);
+}
+
+.font-yatra {
+  font-family: var(--font-yatra);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Festive gold shimmer gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFE27D 0%, #FFA800 45%, #FFDF73 70%, #C48200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to right, #eab308, #f59e0b, #fbbf24, #d97706) 1;
+}
+
+.diya-glow {
+  filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.7)) drop-shadow(0 0 35px rgba(239, 68, 68, 0.4));
+}
+
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(1.08, 0.96) rotate(1.5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95, 1.05) rotate(-2deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.04, 1.02) rotate(1deg);
+    opacity: 0.98;
+  }
+}
+
+.animate-flame {
+  animation: flame-flicker 1.8s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+/* Custom scrollbar for mobile festive vibe */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #190a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 9999px;
+}
