@@ -5,20 +5,20 @@
 
 // Return clean, plain website URL without any query params or hash
 export function getPlainWebsiteUrl(): string {
-  if (typeof window === 'undefined') return '';
-  return `${window.location.origin}${window.location.pathname}`;
+  // Always use the official production domain for all shareable links
+  return 'https://diwaliwishes.online/';
 }
 
-// Build standard caption containing the greeting and website link
+// Build standard caption containing the greeting and website link (no emojis per policy instructions)
 export function buildShareCaption(senderName: string, lang: 'hi' | 'en'): string {
   const websiteUrl = getPlainWebsiteUrl();
   const cleanSender = senderName.trim() || (lang === 'hi' ? 'आपके प्रियजन' : 'Your friend');
 
   let caption = '';
   if (lang === 'en') {
-    caption = `🪔 Warm Diwali wishes from ${cleanSender}! 🙏\n\nCreate your own beautiful greeting for your loved ones:\n${websiteUrl}`;
+    caption = `Warm Diwali wishes from ${cleanSender}!\n\nCreate your own personalized greeting for your loved ones:\n${websiteUrl}`;
   } else {
-    caption = `🪔 ${cleanSender} की ओर से दीपावली की हार्दिक शुभकामनाएँ! 🙏\n\nआप भी अपनों के लिए ऐसा खूबसूरत ग्रीटिंग बनाइए:\n${websiteUrl}`;
+    caption = `${cleanSender} की ओर से दीपावली की हार्दिक शुभकामनाएँ!\n\nआप भी अपनों के लिए ऐसा खास ग्रीटिंग बनाइए:\n${websiteUrl}`;
   }
 
   // Ensure pure clean UTF-8 text without replacement character (\uFFFD) or encoding corruption

@@ -409,10 +409,21 @@ export default function App() {
                   <strong className="block text-amber-300 mb-0.5">❓ diwaliwishes.online का उपयोग कैसे करें (User Guide & FAQs)</strong>
                   <span className="text-[11px] text-amber-400/60">वेबसाइट की सभी सुविधाओं का विवरण और अक्सर पूछे जाने वाले 6 प्रश्नोत्तर।</span>
                 </a>
+                <a
+                  href="/articles/index.html"
+                  className="block p-3.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-xs sm:text-sm transition-all text-amber-200 hover:text-white font-medium text-center"
+                >
+                  <strong className="block text-amber-300 mb-0.5">
+                    {lang === 'hi' ? '📚 सभी १५ दीपावली लेख एवं मार्गदर्शिकाएँ पढ़ें' : '📚 View All 15 Festive Articles & Guides'}
+                  </strong>
+                  <span className="text-[11px] text-amber-300/80">
+                    {lang === 'hi' ? 'धनतेरस, गोवर्धन, भाई दूज, रंगोली, पर्यावरण, सुरक्षा, शायरी व शुभकामनाओं पर विस्तृत लेख' : 'Explore all guides on Dhanteras, Bhai Dooj, Rangoli, Safety, Aarti & Wishes'}
+                  </span>
+                </a>
               </div>
             </div>
 
-            {/* 5. FAQ (5 Questions) */}
+            {/* 5. FAQ (6 Questions) */}
             <div className="rounded-2xl bg-amber-950/40 border border-amber-600/30 p-5 sm:p-6 backdrop-blur-md shadow-xl">
               <h2 className="text-lg sm:text-xl font-bold text-amber-300 font-rozha mb-4 flex items-center gap-2">
                 <span>💬</span>
@@ -469,6 +480,16 @@ export default function App() {
                       : 'Yes, you can share directly via the WhatsApp button or download the file to post on your status and groups.'}
                   </p>
                 </div>
+                <div className="bg-black/30 rounded-xl p-3.5 border border-amber-500/20">
+                  <h3 className="font-semibold text-amber-200 text-xs sm:text-sm mb-1">
+                    {lang === 'hi' ? '6. क्या मैं किसी खास व्यक्ति के नाम से भी कार्ड बना सकता हूँ?' : '6. Can I personalize wishes for a specific individual?'}
+                  </h3>
+                  <p className="text-xs text-amber-200/70 leading-relaxed">
+                    {lang === 'hi'
+                      ? 'हाँ, आप "खास व्यक्ति को भेजें" विकल्प चुनकर प्राप्तकर्ता (जैसे माता-पिता, मित्र, भाई-बहन) का नाम भी जोड़ सकते हैं।'
+                      : 'Yes, simply select "Special Person" mode to add the recipient\'s name alongside your own name for a personal touch.'}
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -486,7 +507,7 @@ export default function App() {
           <span className="text-amber-600/60">•</span>
           <a href="/how-to-use.html" className="text-amber-300 hover:text-amber-100 hover:underline">How to Use (उपयोग विधि)</a>
           <span className="text-amber-600/60">•</span>
-          <a href="/articles/diwali-significance.html" className="text-amber-300 hover:text-amber-100 hover:underline">Articles (लेख)</a>
+          <a href="/articles/index.html" className="text-amber-300 hover:text-amber-100 hover:underline">Articles (लेख)</a>
           <span className="text-amber-600/60">•</span>
           <a href="/contact.html" className="text-amber-300 hover:text-amber-100 hover:underline">Contact Us (संपर्क)</a>
           <span className="text-amber-600/60">•</span>
